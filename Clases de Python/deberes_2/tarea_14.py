@@ -8,3 +8,9 @@ answer = 1
 while answer < number:
     print(answer)
     answer *= 2
+
+# while 2 ** counter <= number:
+#     print(2 ** counter)
+#     counter += 1
+
+
