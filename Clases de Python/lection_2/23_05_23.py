@@ -59,6 +59,7 @@ for (i, j) in d.items():
     print(i, j)
 
 # МНОЖЕСТВА - могут быть только уникальные значения!
+colors = set()
 colors = {'red', 'green', 'blue'}
 # добавить элемент в множество!
 colors.add('grey')
