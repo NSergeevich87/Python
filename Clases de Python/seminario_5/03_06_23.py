@@ -1,10 +1,10 @@
-# n = int(input('Vvedite chislo N: '))
-# def fib(n):
-#     if n in[1, 2]:
-#         return 1
-#     else:
-#         return fib(n - 1) + fib(n - 2)
-# print(fib(n))
+n = int(input('Vvedite chislo N: '))
+def fib(n):
+    if n in[1, 2]:
+        return 1
+    else:
+        return fib(n - 1) + fib(n - 2)
+print(fib(n))
 
 # Хакер Василий получил доступ к классному журналу и хочет заменить все свои минимальные оценки на максимальные. 
 # Напишите программу, которая заменяет оценки Василия, но наоборот: все максимальные – на минимальные.
