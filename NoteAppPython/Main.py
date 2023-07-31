@@ -24,12 +24,12 @@ def show_notes():
         print("Заметка не найдена!")
 
 def del_note():
-    filename = input("Введите имя файла, который вы хотите удалить: ") + ".txt"
+    filename = input("Введите имя заметки, которую вы хотите удалить: ") + ".txt"
     if os.path.exists(filename):
         os.remove(filename)
-        print(f"Файл {filename} удален.")
+        print(f'Заметка "{filename}" удалена.')
     else:
-        print("Файл не найден.")
+        print("Заметка не найдена.")
         
 def edit_note():
     filename = input("Введите имя заметки, которую вы хотите редактировать: ") + ".txt"
