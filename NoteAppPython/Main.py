@@ -6,6 +6,7 @@ def create_note():
     with open(filename, "w") as file:
         content = input("Напишите что-нибудь в заметку: ")
         file.write(content)
+        file.close
 
 def show_notes():
     files = os.listdir()
@@ -20,6 +21,7 @@ def show_notes():
         with open(filename, "r") as file:
             content = file.read()
             print(content)
+            file.close
     else:
         print("Заметка не найдена!")
 
@@ -37,6 +39,7 @@ def edit_note():
         content = file.read()
         print(f'Текущее содержимое заметки "{filename}":')
         print(content)
+        file.close
 
     edit_mode = input("Хотите перезаписать всю заметку (введите 'всю')\n отредактировать заметку частично (введите 'частично')\n или продолжить запись (введите 'продолжить')? ")
     if edit_mode == "всю":
@@ -44,6 +47,7 @@ def edit_note():
         with open(filename, "w") as file:
             file.write(new_content)
             print(f'Заметка "{filename}" обновлена.')
+            file.close
     elif edit_mode == "частично":
         lines = content.split("\n")
         for i, line in enumerate(lines):
@@ -56,11 +60,13 @@ def edit_note():
         with open(filename, "w") as file:
             file.write("\n".join(lines))
             print(f'Заметка "{filename}" обновлена.')
+            file.close
     elif edit_mode == "продолжить":
         new_content = input("Введите текст, который вы хотите добавить: ")
         with open(filename, "a") as file:
             file.write("\n" + new_content)
             print(f'Заметка "{filename}" обновлена.')
+            file.close
     else:
         print("Неверный режим редактирования.")
 
